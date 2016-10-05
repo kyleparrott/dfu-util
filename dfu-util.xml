@@ -1,0 +1,38 @@
+<?xml version="1.0" ?>
+<?xml-stylesheet type='text/xsl' href='interface.xsl'?>
+<interface uri="https://raw.githubusercontent.com/kyleparrott/dfu-util/master/dfu-util.xml" xmlns="http://zero-install.sourceforge.net/2004/injector/interface">
+    <name>dfu-util</name>
+    <summary>Flash utility for DFU Devices</summary>
+    <homepage>http://dfu-util.sourceforge.net/</homepage>
+    <group main="dfu-util">
+        <group arch="MacOSX-*">
+            <requires importance="required" interface="https://raw.githubusercontent.com/kyleparrott/libusb1.0.0/master/libusb.xml">
+                <environment insert="" mode="prepend" name="DYLD_LIBRARY_PATH"/>
+            </requires>
+            <implementation id="sha1=f85d1e68d7723366c9267c69e4af7d7911d26740" version="0.0">
+                <archive href="https://raw.githubusercontent.com/kyleparrott/dfu-util/master/macos/dfu-util.zip" size="20778"/>
+            </implementation>
+        </group>
+        <group arch="Linux-*">
+            <requires importance="required" interface="http://127.0.0.1:8000/openocd/libusb1.0.0/libusb.xml">
+                <environment insert="" mode="prepend" name="LD_LIBRARY_PATH"/>
+            </requires>
+            <implementation id="sha1=2107472c1e14b5fb2fca6a23fdaffb15737e254a" version="0.0">
+                <archive href="https://raw.githubusercontent.com/kyleparrott/dfu-util/master/linux/dfu-util.zip" size="21670"/>
+            </implementation>
+        </group>
+    </group>
+</interface>
+<!-- Base64 Signature
+iQIcBAABCgAGBQJX9WPZAAoJEJzS+Pb4kySclvoP/iM5DywuCW6FcxJRH+DYwId+UxcvrT057iii
+4FCNU5Htd92lljmlrH3AuEZW/8miV2mNpGUe/NrDh1ImqXK5Ia+WEPT+/AUxTrtuy1g3mSj8EDQM
+YJiaOqivjGYteMPcTezVvnAoYitUqy9D2XTBhlcWJG8yKy1CwpdVWvUeoTR/ON4/U0PCywKjPKZV
+bEIbreMOwr0q49KJnQMl2+raTYPlsfF2xiJxoxgXHognauH2AgONe+wdPvSFHLCTLkwGMMrJEY5C
+odUiymfd8JMkz8IBtFEa8IEwug7/qDj/mqOtwFxGDg/OF+9za9UibSAsu+JWon3Kz1DN5Fvmh1zT
+Ivaj/ThrjmUoFnmDdYwUBpicfQWnPnzcbF99iUL1FX8APSUZLNun5vTyEAtNrpNaF91UEof8Q0tq
+xavbCPXiOU7lYvYBbg0V0IdggtF8ESj5Vq1V05MqTXjzFEFLhS7MZ7wxVqWngpb8ALum65wD/4fK
+PEswL471K723DIAtaoPll/ntmKOr/eaktFgDFTDBktkUTv01eP4DhZcpt44qehX/cY0Qe3n4xegJ
+t2CLlG0C9taKrDfRr52p0Rv/E8vZ0WvDgevMPQdL8p9j0M19MTJeOnSb/H8ktfAM7R65RfG45/qo
+OJSh5LlgHh4V7LEnTO3eu3XvPq0ixgrK+RTWMpn5
+
+-->
